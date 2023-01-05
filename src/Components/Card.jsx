@@ -3,20 +3,25 @@ import { Link } from 'react-router-dom'
 
 function Card({ title, coverPhoto, datepublished, content, slug, author }) {
     return (
-        <div className='bg-[#0F172A]  overflow-hidden  rounded-md shadow-lg  mx-w-sm mx-5 md:mx-auto ' >
-            <img className='rounded-md w-full ' src={coverPhoto.url} alt="coverPhoto" />
-            <div className=' px-5 py-8 ' >
+        <Link to={`/posts/${slug}`} className='flex' >
+            <div className='bg-[#0F172A] hover:scale-105 transition duration-100 ease-in overflow-hidden  rounded-md shadow-lg  max-w-sm mx-5  ' >
+                <img className='rounded-md w-full ' src={coverPhoto.url} alt="coverPhoto" />
+                <div className=' px-5 py-8 ' >
 
-                <h3 className='text-[#F2FFE3] font-bold' >{title}</h3>
+                    <h3 className='text-[#F2FFE3] font-bold' >{title}</h3>
+                    <div className='flex text-center ' >
+                        <img src={author.avatar.url} className={`rounded-full w-[25px] h-[19px] mx-4 my-4 `} />
+                        <div className='justify-center flex items-center' >
 
-                <p className='text-gray-500 font-medium ' >{` ارسال شده در تاریخ: ${datepublished}`}</p>
+                            <h3 className='text-[#F2FFE3] font-bold justify-center items-center text-center ' >{author.name}</h3>
+                        </div>
+                    </div>
+
+                    <p className='text-gray-500 text-sm font-semibold  ' >{` ارسال شده در تاریخ: ${datepublished}`}</p>
+                </div>
+
             </div>
-            <Link to={`/posts/${slug}`} className='flex' >
-                <button className='text-[#F2FFE3] font-medium  mx-4  bg-blue-600 hover:bg-blue-800 w-full py-3 rounded-md my-4  ' >
-                    دیدن این مطلب
-                </button>
-            </Link>
-        </div>
+        </Link>
     )
 }
 
