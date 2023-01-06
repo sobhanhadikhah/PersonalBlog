@@ -12,7 +12,7 @@ function Navbar() {
             <div className='animate__animated animate__fadeIn   max-w-[1240px] w-full flex justify-between items-center h-24 mx-auto px-4 text-white ' >
                 <div className='flex ' >
                     <Link to={"/"} >
-                        <h3 className='text-white font-bold ml-5   ' >
+                        <h3 className='text-white font-bold ml-5 matrixfont   ' >
                             <span className='text-red-600 text-3xl ' >ODI</span> blog
                         </h3>
                     </Link>
@@ -27,7 +27,7 @@ function Navbar() {
                     <NavLink to={"/"} >
                         <li className='   cursor-pointer hover:text-red-600 transition duration-100 ease-in mx-3' >ارسال پست</li>
                     </NavLink>
-                    <NavLink>
+                    <NavLink to={"users"} >
                         <li className='  cursor-pointer hover:text-red-600 transition duration-100 ease-in mx-3' > کاربران </li>
                     </NavLink>
                     <NavLink>
@@ -53,7 +53,7 @@ function Navbar() {
                             <NavLink to={"/"} >
                                 <li className='  py-4  cursor-pointer hover:text-red-600 transition duration-100 ease-in mx-3' >ارسال پست</li>
                             </NavLink>
-                            <NavLink>
+                            <NavLink to={"users"} >
                                 <li className=' py-4 cursor-pointer hover:text-red-600 transition duration-100 ease-in mx-3' > کاربران </li>
                             </NavLink>
                             <NavLink>

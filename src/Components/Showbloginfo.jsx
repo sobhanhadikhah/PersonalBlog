@@ -52,10 +52,10 @@ function Showbloginfo() {
         <div style={{ direction: "rtl" }} className='   h-screen   ' >
             <div className='relative h-full w-full ' >
                 <img className='w-full fixed h-full object-cover ' src={coverPhoto && coverPhoto.url} alt="" />
-                <div className='absolute flex flex-col justify-center items-center bg-black bg-opacity-50  top-0 bottom-0 left-0 right-0  ' >
-                    <div className='bg-white bg-opacity-50 rounded-xl overflow-y-auto  ' >
+                <div className='absolute flex flex-col justify-center items-center bg-black   bg-opacity-50  top-0 bottom-0 left-0 right-0  ' >
+                    <div className='bg-white bg-opacity-50  overflow-y-auto overscroll-auto  ' >
                         <h1 className='text-right text-3xl py-4 font-bold mx-3 ' >{title}</h1>
-                        <div className=' max-w-[1240px] font-medium  font-sans px-4 py-8  rounded-md ' dangerouslySetInnerHTML={{ __html: content && content.html }} >
+                        <div className=' max-w-[1240px] font-medium matrixfont   px-8 py-8 md:mx-auto mx-4   ' dangerouslySetInnerHTML={{ __html: content && content.html }} >
 
 
                         </div>

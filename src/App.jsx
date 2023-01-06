@@ -1,14 +1,10 @@
 import { useState, useContext, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import axios from 'axios';
 import Postcontext from './context/context';
-import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { GraphQLClient, gql } from "graphql-request";
-import { Card, Cardlister, Showbloginfo } from "./Components/"
+import { Card, Cardlister, Home, NotFound, Showbloginfo, Users } from "./Components/"
 import { Route, Routes } from 'react-router-dom';
-import Skeletonloading from './loading/Skeletonloading';
 import Navbar from './Components/Navbar';
 function App() {
   const [skeletonloading, setSkeletonloading] = useState(false)
@@ -54,8 +50,10 @@ function App() {
       <Postcontext.Provider value={{ posts: mepostss }}  >
         <Navbar />
         <Routes>
-          <Route path='/' element={<Cardlister loading={skeletonloading} />} />
+          <Route path='/' element={<Home skeletonloading={skeletonloading} />} />
           <Route path='/posts/:slug' element={<Showbloginfo />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
 
 

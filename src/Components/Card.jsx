@@ -10,7 +10,7 @@ function Card({ title, coverPhoto, datepublished, content, slug, author }) {
 
                     <h3 className='text-[#F2FFE3] font-bold' >{title}</h3>
                     <div className='flex text-center ' >
-                        <img src={author.avatar.url} className={`rounded-full w-[25px] h-[19px] mx-4 my-4 `} />
+                        <img src={author.avatar.url} className={`rounded-fulld w-[25px] h-[19px] mx-4 my-4 `} />
                         <div className='justify-center flex items-center' >
 
                             <h3 className='text-[#F2FFE3] font-bold justify-center items-center text-center ' >{author.name}</h3>
